@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA Bank ATM App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer-container">     
+        <div class="aside">
+            <div>
+                <button class="nav-acc-details">
+                    Account Details
+                </button>
+                <button class="nav-dep-withdraw">
+                    Deposit / Withdraw
+                </button>
+            </div>
+        </div>
+        <div class="main-two">
+            <div class="">
+                <div>
+                    <br>
+                    <h2>Name :</h2>
+                    <input id="name-display" type="text" value="Lord Buckethead"/>
+                </div>
+            </div>   
+            <div class="">
+                <div>
+                    <h2>Account Number :</h2>
+                    <input id="accnum-display" type="text" value="123456000100101"/>
+                </div>
+            </div>              
+        </div>
+        <div class="main">
+            <div class="display-container">
+                <div class="display-grid-one">
+                    <div class="display-amount">
+                        <h2>Amount :</h2>
+                        <input id=numDisplay type="text"/>
+                    </div>
+                </div>   
+                <div class="display-grid-two">
+                    <div class="display-totals">
+                        <h2>Total Balance :</h2>
+                        <input id=totalBalanceInput type="text"/>
+                    </div>
+                </div>              
+            </div>               
+            <div class="numpad-container">
+                <div class="numpad-grid">
+                    <div class="numpad-main">                       
+                        <form>
+                            <br />
+                            <input type="button" class="numpad-buttons" name="1" value="1" id="1" onclick=addNumber(this); />
+                            <input type="button" class="numpad-buttons" name="2" value="2" id="2" onclick=addNumber(this); />
+                            <input type="button" class="numpad-buttons" name="3" value="3" id="3" onclick=addNumber(this); />
+                            <input type="button" class="deposit-btn" value="DEPOSIT" onclick="depositMoney()">
+                            <br>
+                            <input type="button" class="numpad-buttons" name="4" value="4" id="4" onclick=addNumber(this); />
+                            <input type="button" class="numpad-buttons" name="5" value="5" id="5" onclick=addNumber(this); />    
+                            <input type="button" class="numpad-buttons" name="6" value="6" id="6" onclick=addNumber(this); />
+                            <input type="button" class="withdraw-btn" value="WITHDRAW" onclick="withdrawMoney(this)">
+                            <br>
+                            <input type="button" class="numpad-buttons" name="7" value="7" id="7" onclick=addNumber(this); />
+                            <input type="button" class="numpad-buttons" name="8" value="8" id="8" onclick=addNumber(this); />
+                            <input type="button" class="numpad-buttons" name="9" value="9" id="9" onclick=addNumber(this); />
+                            <input type="button" class="numpad-zero" name="0" value="0" id="0" onclick=addNumber(this); />                    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class='money-drop'>
+            <img src="../ga-bank-atm-v3/money.png" style="width: 300px; margin: 5px 0 0 80px;"/>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
